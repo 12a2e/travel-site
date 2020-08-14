@@ -5,6 +5,7 @@ const postCSSPlugins = [
     require('postcss-mixins'),
     require('postcss-simple-vars'),
     require('postcss-nested'),
+    require('postcss-hexrgba'),
     require('autoprefixer')
 
 ]
@@ -30,7 +31,8 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader', { loader: 'postcss-loader', options: { plugins: postCSSPlugins } }]
-            }
+            },
+
         ]
     }
 }
